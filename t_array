@@ -1,0 +1,22 @@
+
+[1mFrom:[0m /home/danborden/learn/leetcode/min_start_value.rb:20 Object#validate_array:
+
+    [1;34m11[0m: [32mdef[0m [1;34mvalidate_array[0m(array, start_val)
+    [1;34m12[0m:   [1;34m# new_array = [][0m
+    [1;34m13[0m:   array.each_with_index [32mdo[0m |num, index|
+    [1;34m14[0m:     [32mif[0m index == [1;34m0[0m
+    [1;34m15[0m:       [32mreturn[0m [1;36mfalse[0m [32mif[0m (array[[1;34m0[0m] + start_val) < [1;34m0[0m
+    [1;34m16[0m:       test_array = [array[[1;34m0[0m] + start_val]
+    [1;34m17[0m:       
+    [1;34m18[0m:       [32mnext[0m
+    [1;34m19[0m:     [32mend[0m
+ => [1;34m20[0m: binding.pry
+    [1;34m21[0m:     test_array << num + test_array[index - [1;34m1[0m]
+    [1;34m22[0m: 
+    [1;34m23[0m:     binding.pry [32mif[0m test_array.last < [1;34m0[0m
+    [1;34m24[0m:     [32mreturn[0m [1;36mfalse[0m [32mif[0m test_array.last < [1;34m0[0m
+    [1;34m25[0m: 
+    [1;34m26[0m:   [32mend[0m
+    [1;34m27[0m:   [1;36mtrue[0m
+    [1;34m28[0m: [32mend[0m
+
