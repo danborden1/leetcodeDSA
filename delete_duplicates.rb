@@ -41,6 +41,3 @@ first.next = second
 head = first
 
 x = delete_duplicates(head)
-puts x
-
-binding.pry
