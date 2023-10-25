@@ -31,11 +31,11 @@ third = ListNode.new(2)
 fourth = ListNode.new(3)
 fifth = ListNode.new(3)
 
-# first.next = second
-# second.next = third
-# third.next = fourth
-# fourth.next = fifth
-# head = first
+first.next = second
+second.next = third
+third.next = fourth
+fourth.next = fifth
+head = first
 
 first.next = second
 head = first
