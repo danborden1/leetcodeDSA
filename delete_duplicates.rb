@@ -9,17 +9,14 @@ end
 
 def delete_duplicates(head)
   node = head
-  while !node.nil? && !node.next.nil?
-    # binding.pry if node.val == 3
-        if node.next.val == node.val
-            if node.next.next.nil?
-                node.next = nil
-                break
-            else
-              node.next = node.next.next
-            end
+  while !node.nil?
+        nodeval = node.val
+        nextnode = node.next
+        while !nextnode.nil? && nextnode.val == nodeval
+            nextnode = nextnode.next
         end
-        node = node.next
+        node.next = nextnode
+        node = nextnode
     end
     head
 end
@@ -27,17 +24,15 @@ end
 
 first = ListNode.new(1)
 second = ListNode.new(1)
-third = ListNode.new(2)
-fourth = ListNode.new(3)
-fifth = ListNode.new(3)
+third = ListNode.new(1)
+# fourth = ListNode.new(3)
+# fifth = ListNode.new(3)
 
 first.next = second
 second.next = third
-third.next = fourth
-fourth.next = fifth
+# third.next = fourth
+# fourth.next = fifth
 head = first
 
-first.next = second
-head = first
 
 x = delete_duplicates(head)
